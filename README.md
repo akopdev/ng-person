@@ -1,27 +1,70 @@
-# NgPersonDemo
+# ng-person
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
+A universal avatar component for Angular 2+ applications that generates truly unique colored letter avatar based on provided name. It also supports user photo, name with subtitle and different styles.
 
-## Development server
+![demo](demo.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+Install ng-person component using NPM:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+$ npm install ng-person --save
+```
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Once you have installed ng-person, you can import it into your AppModule:
 
-## Running unit tests
+```javascript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+import { AppComponent } from './app.component';
+import { NgPersonModule } from 'ng-person';
 
-## Running end-to-end tests
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    // Specify NgPersonModule as an import 
+    NgPersonModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1. Call component from your Angular application:
 
-## Further help
+```html
+<ng-person name="Akop Kesheshyan"></ng-person>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Examples
+
+```html
+<ng-person name="Akop Kesheshyan" title="Software Developer"></ng-person>
+
+<ng-person picture="https://example.com/pic.jpg" showName="false"></ng-person>
+
+<ng-person name="Akop Kesheshyan" size="large" round="true"></ng-person>
+```
+
+## Options
+
+Attribute | Type    | Description
+--------- | ------- | ------------------------------------------------------------------------------
+picture   | string  | Absolute path to a picture image.
+name      | string  | Specifies a name to be shown on the right of a user picture.
+title     | string  | Specifies a title to be shown under the name.
+showName  | boolean | Whether to show a user name or not.
+round     | boolean | Round corners of the picture box.
+size      | string  | Size of the component. Possible values: `small`, `medium (default)`, `large`, `giant`.
+
+## License
+
+MIT &copy; [Akop Kesheshyan](mailto:hello@akop.dev)
