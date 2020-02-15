@@ -1,6 +1,20 @@
 {
   "name": "ng-person",
-  "version": "0.0.1",
+  "description": "A universal avatar component for Angular 2+ applications that generates truly unique colored letter avatar based on provided name.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "avatar",
+    "component",
+    "initials"
+  ],
+  "author": "Akop Kesheshyan",
+  "homepage": "https://github.com/akopkesheshyan/ng-person",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akopkesheshyan/ng-person"
+  },
   "peerDependencies": {
     "@angular/common": "^9.0.1",
     "@angular/core": "^9.0.1",
