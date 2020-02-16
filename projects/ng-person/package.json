@@ -1,7 +1,7 @@
 {
   "name": "ng-person",
   "description": "A universal avatar component for Angular 2+ applications that generates truly unique colored letter avatar based on provided name.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "keywords": [
     "angular",
@@ -19,5 +19,9 @@
     "@angular/common": "^9.0.1",
     "@angular/core": "^9.0.1",
     "tslib": "^1.10.0"
+  },
+  "dependencies": {
+    "tinycolor2": "^1.4.1",
+    "ts-md5": "^1.2.7"
   }
 }
