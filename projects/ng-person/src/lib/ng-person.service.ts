@@ -11,7 +11,7 @@ export class NgPersonService {
   constructor() { }
 
   public getColorMap(name: string): AvatarStyle {
-    let map: AvatarStyle = {
+    const map: AvatarStyle = {
       background: '#000',
       color: '#fff'
     };
@@ -27,12 +27,7 @@ export class NgPersonService {
   }
 
   public getInitials(name: string): string {
-    const nameParts = name.split(" ")
-    if (nameParts.length >= 2) {
-      return (nameParts[0].charAt(0) + nameParts[1].charAt(0)).toUpperCase();
-    } else {
-      return nameParts[0].charAt(0).toUpperCase();
-    }
+    return name.split(' ').slice(0, 2).map(part => part.charAt(0)).join('').toUpperCase();
   }
 
 

@@ -1,7 +1,7 @@
 {
   "name": "ng-person",
   "description": "A universal avatar component for Angular 2+ applications that generates truly unique colored letter avatar based on provided name.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "keywords": [
     "angular",
